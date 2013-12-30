@@ -101,8 +101,8 @@
 	<div class="editKpiForm">
 		<ul>
 			<!--<li>一級維度 <input type= "text" id="perspective" value= {{perspective}}></li>-->
-			<li>一級維度<select id="perspective" value={{perspective}}><option> 财务</option><option>客户 </option><option> 内部流程 </option><option> 学习成长</option></select></li>
-			<li>二級維度 <input type= "text" id="category" value= {{category}}></li>
+			<li>一級維度<select id="perspective" value={{perspective}}><option> 财务</option><option>客户</option><option> 内部流程</option><option> 学习成长</option></select></li>
+			<li>二級維度<input type= "text" id="category" value= {{category}}></li>
 			<li>指標名稱 <input type="text" id="title" value= {{title}}></li> 
 			<li>定義 <input type= "text" id="definition" value= {{definition}}></li>
 			<!--<li>數據類型 <input type= "text" id="type" value= {{type}}></li>-->
@@ -210,6 +210,19 @@
 <template name= "editTeamForm">
 {{#if show}}
 	<div class="editTeamForm">
+		<div>
+			<div class="btn-group">
+				<a class="btn-dropdown toggle" data-toglle="dropdown" href="#">All
+				<span class="caret"></span>
+				</a>
+				<ul class="dropdown-manu" role="menu" aria-labelledby="dLabel">
+					<li><a tabindex="-1" href="#">财务</a></li>
+					<li><a tabindex="-1" href="#">客户</a></li>
+					<li><a tabindex="-1" href="#">内部流程</a></li>
+					<li><a tabindex="-1" href="#">学习成长</a></li>
+				</ul>
+			</div>
+		</div>
 		<div class="basics">
 			<input type="text" id="hospital"  value={{hospital}} /> 
 			<input type="text" id="team"  value="{{team}}" /> 
